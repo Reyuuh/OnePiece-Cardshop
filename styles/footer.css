@@ -1,0 +1,19 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45%;
+    padding: 2rem 3rem;
+    color: white;
+   
+}
+
+.footer-logo img {
+
+    width: 60%;
+    height: auto;
+}
+
+footer {
+    background-color:rgb(201, 54, 34);
+}

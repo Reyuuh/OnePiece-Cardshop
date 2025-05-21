@@ -1,0 +1,62 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 10px;
+}
+
+
+.login-section {
+    position: relative;          
+    min-height: 100vh;            
+    color: white;
+    background-image: url("../public/images/onepiece.png");
+    background-position: center;
+    background-size: cover;      
+    background-attachment: fixed;
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .register-title {
+    display: flex;
+    gap: 30px
+  }
+  
+
+
+  .container {
+    background: #000000c0; 
+    padding: 4rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+.welcome {
+    font-size: 30px;
+   
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.login-group {
+    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.error{
+color: red;
+}

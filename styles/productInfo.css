@@ -1,0 +1,12 @@
+.product-info-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.specific-product {
+    height: auto;
+    width: 20%;
+    align-items: center;
+}

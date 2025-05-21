@@ -1,0 +1,23 @@
+.product-grid {
+    display: flex;           
+    flex-wrap: wrap;      
+    gap: 20px;               
+    justify-items: center;
+    align-items: center;
+    padding: 3rem;
+    align-items: stretch;
+    
+}
+
+.product-card {
+    flex: 1 1 calc(22.22% - 20px);
+    max-width: calc(22.22% - 20px);
+ 
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   padding: 10px;
+    
+    
+}

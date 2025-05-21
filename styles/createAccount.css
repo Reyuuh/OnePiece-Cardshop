@@ -1,0 +1,48 @@
+
+.register-section {
+    position: relative;          
+    min-height: 100vh;           
+    
+  color: white;
+    background-image: url("../public/images/joinus.jpg");
+    background-position: center;
+    background-size: cover;      
+    background-attachment: fixed;
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.801);
+    padding: 40px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+.register-container {
+    padding: 5px;
+    gap: 10px;
+}
+
+.register-container .form-group {
+    margin-bottom: 1rem; /* adds spacing between fields */
+}
+
+
+
+.register-img {
+    width: 50%;
+    height: auto;
+}
+
+.error {
+    color: red;
+}
