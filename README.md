@@ -30,5 +30,5 @@ OnePiece Cardshop är en webbapplikation byggd med PHP och MySQL som fungerar so
 - `.env` – Miljövariabler
 
 ## Skärmdumpar
-![Alt text] (./public/landingpage.png)
+![Alt text] (./public/images/landingpage.png)
 ![Alt text](https://s3.ezgif.com/tmp/ezgif-3cde571d407a45.gif)
