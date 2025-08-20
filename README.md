@@ -31,4 +31,4 @@ OnePiece Cardshop är en webbapplikation byggd med PHP och MySQL som fungerar so
 
 ## Skärmdumpar
 ![Alt text](./public/images/landingpage.png)
-![Alt text](https://s3.ezgif.com/tmp/ezgif-3cde571d407a45.gif)
+![Alt text](public/images/68747470733a2f2f73332e657a6769662e636f6d2f746d702f657a6769662d33636465353731643430376134352e676966.gif)
