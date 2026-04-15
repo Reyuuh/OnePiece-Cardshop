@@ -40,5 +40,4 @@ Styles follow a layered approach:
 5. Serve locally with the PHP built-in server or a local stack (XAMPP, Laragon, etc.)
 
 ## Screenshots
-![Shop](./public/images/onepiecestart.png)
-![Animated](public/images/68747470733a2f2f73332e657a6769662e636f6d2f746d702f657a6769662d33636465353731643430376134352e676966.gif)
+![Preview](./public/images/onepromo.gif)
