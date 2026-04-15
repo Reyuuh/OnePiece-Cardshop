@@ -40,4 +40,4 @@ Styles follow a layered approach:
 5. Serve locally with the PHP built-in server or a local stack (XAMPP, Laragon, etc.)
 
 ## Screenshots
-![Preview](./public/images/onepromo.gif)
+![Shop](./public/images/onepiecestart.png)
