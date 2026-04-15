@@ -1,117 +1,173 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 999; 
-    
-    font-size: 19px;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    
-}
-
-.search-container{
+    z-index: 999;
+    background-color: var(--color-bg);
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-md);
+    border-bottom: 2px solid var(--color-border);
 }
 
+/* ── Logo ──────────────────────────────────── */
 
-.form-control {
-    padding: 6px;
-    border: 1px solid #000;
-    font-size: 1em;
-}
-
-.search-button {
-    border: none;
-    padding: 0;
-    margin: 0;
-    background: red;
-    box-shadow: none;
-    color: white;
-    padding: 10px;
-}
-
-.search-button:hover{
-    cursor: pointer;
-}
-
-.logo img {
-    height: 120px;
+.nav-logo img {
+    height: 80px;
     width: auto;
-
-
-    
+    display: block;
 }
 
-
+/* ── Nav links ─────────────────────────────── */
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    color: #c54444;
-}
-
-.nav-links,
-.nav-links ul {
-    list-style: none;   /* tar bort bullets */
+    gap: 0.25rem;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-
-.nav-link, .drop-down li {
+.nav-links ul {
     list-style: none;
-    height: 100%;
-    padding: 0.5rem ;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 20px;
-    
+    padding: 0;
+    margin: 0;
 }
 
-a {
-    text-decoration: none;
-    color: currentColor;
+.nav-link {
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-nav-link);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-link a {
+    color: inherit;
+}
+
+.nav-link:hover,
+.nav-link:hover > a {
+    color: var(--color-nav-link-hover);
+}
+
+/* ── Dropdown ──────────────────────────────── */
+
+.nav-dropdown {
+    position: relative;
 }
 
 .drop-down {
     position: absolute;
-    padding: 1rem ;
-    margin: 0.5rem -0.5rem;
-    background: rgb(255, 61, 2);
-    color: rgb(255, 2, 2);
-
+    top: 100%;
+    left: 0;
+    background: var(--color-primary);
     display: none;
-    
+    min-width: 160px;
+    z-index: 1000;
 }
 
-.nav-link:hover {
-    background-color: rgb(255, 255, 255);
-    color: #7c5555;
-   
+.drop-down li {
+    padding: 0.6rem var(--spacing-md);
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
-.products:hover .drop-down {
+.drop-down li a {
+    color: var(--color-text-on-dark);
+}
+
+.nav-dropdown:hover .drop-down {
     display: block;
-    color: #ffffff;
-    
-}
-
-.products a {
-    display: flex;
-    justify-content: center;
 }
 
 .drop-down li:hover {
-    background: rgb(255, 255, 255);
-    color: #ff0000;
+    background: rgba(0, 0, 0, 0.2);
 }
 
+/* ── Right side ────────────────────────────── */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.nav-username {
+    font-size: 14px;
+    color: var(--color-nav-link);
+    white-space: nowrap;
+}
+
+.search-form {
+    display: flex;
+}
+
+.form-control {
+    padding: 6px 10px;
+    border: 1px solid var(--color-border);
+    border-right: none;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.search-button {
+    border: none;
+    padding: 6px 12px;
+    background: var(--color-primary);
+    color: var(--color-text-on-dark);
+    cursor: pointer;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.search-button:hover {
+    background: var(--color-primary-dark);
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    color: var(--color-nav-link);
+    white-space: nowrap;
+    padding: 5px 12px;
+    border: 2px solid var(--color-primary-light);
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.cart-link:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-on-dark);
+}
+
+/* ── Mobile ────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .nav-logo img {
+        height: 60px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: flex-end;
+        gap: var(--spacing-sm);
+    }
+}

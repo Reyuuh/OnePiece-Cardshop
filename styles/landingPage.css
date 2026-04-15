@@ -1,14 +1,29 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* ── Ticker ────────────────────────────────── */
+
+.ticker-bar {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
 }
 
-.container {
-    max-width: 1200px;   /* You can tweak this */
-    margin: 0 auto;      /* Centers the container */
-    padding: 0 1rem;     /* Optional padding */
+.ticker-text {
+    display: inline-block;
+    color: #e30000;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    animation: ticker-ltr 18s linear infinite;
 }
+
+@keyframes ticker-ltr {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100vw); }
+}
+
+/* ── Promo image ────────────────────────────── */
 
 .promo-art {
     display: flex;
@@ -18,108 +33,8 @@
 .promo-art img {
     width: 100%;
     height: auto;
-    display: block;
     object-fit: cover;
-
+    margin-bottom: 50px;
+    filter: brightness(0.75);
 }
 
-.product-grid {
-    display: flex;           
-    flex-wrap: wrap;      
-    gap: 20px;               
-    justify-items: center;
-    align-items: center;
-    padding: 3rem;
-    align-items: stretch;
-    
-}
-
-.product-card {
-    flex: 1 1 calc(22.22% - 20px);
-    max-width: calc(22.22% - 20px);
- 
-    border: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
- padding: 10px;
-    
-    
-}
-
-.product-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0.5rem 0;
-    overflow: hidden;
-    
-}
-
-.product-image {
-    height: auto;
-    width: 100%;
-   
-}
-
-
-.product-title {
-    text-align: center;
-    font-weight: bold;
-}
-
-.product-price,
-.product-stock {
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.product-action {
-    display: flex;
-    margin-top: auto;
-
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    justify-content: center;
-}
-
-.btn-product {
-    background-color: #131212;
-    color: white;
-    border: none;
-    padding: 0.4rem 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-product:hover {
-    background-color: #000000;
-}
-
-.addcart-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.addtocart-button {
-
-    margin-top: 0.5em;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 0.4rem 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.addtocart-button:hover {
-    background-color: #cc0000;
-}

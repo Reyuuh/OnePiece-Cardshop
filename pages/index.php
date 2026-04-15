@@ -3,7 +3,8 @@ require_once("components/navbar.php");
 require_once("components/footer.php");
 require_once("models/Database.php");
 require_once("models/Product.php"); 
-require_once("components/SingleProduct.php"); 
+require_once("components/SingleProduct.php");
+require_once("components/ticker.php");
 
 $dbContext = new Database(); // Anslut till databasen
 $popularProducts = $dbContext->getPopularProducts(); // Hämta populära produkter
@@ -14,14 +15,19 @@ $popularProducts = $dbContext->getPopularProducts(); // Hämta populära produkt
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Homepage</title>
-    <link rel="stylesheet" href="../styles/landingPage.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/variables.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/landingPage.css">
 </head>
 <body>
     <?php navBar(); ?>
 
+    <?php ticker(); ?>
+
     <div class="promo-art">
         
-        <img src="public/images/hithere.png" alt="image">
+        <img src="/public/images/hithere.png" alt="Promo">
     </div>
 
     <section class="products">
@@ -43,11 +49,11 @@ $popularProducts = $dbContext->getPopularProducts(); // Hämta populära produkt
                         <div class="product-action">
                             <a  href="info?id=<?= $products->id ?>" class="btn-product">Show product</a>
                         </div>
-                              <div class="addcart-container">
+                              <div class="add-cart-container">
                                     <form class="form-addtocart" method="GET" action="/addToCart">
                                         <input type="hidden" name="productId" value="<?php echo $products->id; ?>">
                                         <input type="hidden" name="fromPage" value="<?php echo $_SERVER['REQUEST_URI'] ?>">
-                                        <button type="submit" class="addtocart-button">Add to cart</button>
+                                        <button type="submit" class="add-to-cart-btn">Add to cart</button>
                                     </form>
                                 </div>
                         </div>

@@ -2,7 +2,7 @@
 
 function footer() {
     ?>
-     <link rel="stylesheet" href="../styles/footer.css">
+     <link rel="stylesheet" href="/styles/footer.css">
 <footer class="footer-container">
 <div class="footer-logo">
 <?php echo '<a href="/"><img src="/public/images/nav-logo.png" alt="Logo" /></a>'; ?>

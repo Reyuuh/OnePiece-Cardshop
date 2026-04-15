@@ -1,48 +1,196 @@
-
 .register-section {
-    position: relative;          
-    min-height: 100vh;           
-    
-  color: white;
-    background-image: url("../public/images/joinus.jpg");
-    background-position: center;
-    background-size: cover;      
-    background-attachment: fixed;
-    display: flex;               
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .container {
+    position: relative;
+    min-height: 100vh;
+    color: var(--color-text-on-dark);
     display: flex;
-    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.801);
-    padding: 40px;
-    margin: 50px auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+    overflow: hidden;
+}
+
+/* Background image — sharp and full */
+.register-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("/public/images/joinus.jpg");
+    background-size: cover;
+    background-position: center top;
+    z-index: 0;
+}
+
+/* Subtle dark vignette so the card stays readable */
+.register-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0.65) 100%
+    );
+    z-index: 1;
+}
+
+.register-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Card (same treatment as login) ───────── */
+
+.auth-card {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 3px solid var(--color-primary);
+    box-shadow: 0 0 40px rgba(255, 61, 2, 0.15), 0 16px 48px rgba(0, 0, 0, 0.6);
+    padding: 2.5rem 2.5rem 2rem;
     width: 90%;
-    max-width: 500px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
-
-.register-container {
-    padding: 5px;
-    gap: 10px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.register-container .form-group {
-    margin-bottom: 1rem; /* adds spacing between fields */
+/* ── Headings ──────────────────────────────── */
+
+.auth-heading {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text-on-dark);
+    letter-spacing: -0.5px;
 }
 
-
-
-.register-img {
-    width: 50%;
-    height: auto;
+.auth-sub {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.25rem;
 }
 
-.error {
-    color: red;
+/* ── Error ─────────────────────────────────── */
+
+.auth-error {
+    background: rgba(255, 77, 77, 0.15);
+    border-left: 3px solid var(--color-primary-light);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-primary-light);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* ── Form fields ───────────────────────────── */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-group label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.form-group input {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    color: var(--color-text-on-dark);
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.field-error {
+    font-size: 0.75rem;
+    color: var(--color-primary-light);
+}
+
+/* ── Two-column grid for address fields ────── */
+
+.register-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ── Primary button ────────────────────────── */
+
+.btn-register {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--color-primary);
+    color: var(--color-text-on-dark);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 0.5rem;
+}
+
+.btn-register:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-register:active {
+    transform: translateY(0);
+}
+
+/* ── Auth links ────────────────────────────── */
+
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.auth-links a {
+    color: rgba(255, 255, 255, 0.65);
+    transition: color 0.2s;
+}
+
+.auth-links a:hover {
+    color: var(--color-primary);
+}
+
+/* ── Mobile ────────────────────────────────── */
+
+@media (max-width: 600px) {
+    .register-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card {
+        padding: 2rem 1.25rem 1.5rem;
+        width: 95%;
+    }
 }

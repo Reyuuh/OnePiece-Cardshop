@@ -1,31 +1,5 @@
-.product-grid {
-display: flex;
-justify-content: center;
-padding: 7rem;
-gap: 3rem;
-}
-.product-title {
-   text-align: center;
-}
-
-.product-card {
-    flex: 1 1 calc(22.22% - 20px);
-    max-width: calc(22.22% - 20px);
- 
-    border: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   padding: 10px;
-    
-}
-
-.btn-visaprodukt {
-    display: flex;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    justify-content: center;
+.category-title {
+    padding: var(--spacing-lg) 0 var(--spacing-sm);
+    font-size: 1.6rem;
+    color: var(--color-text);
 }
